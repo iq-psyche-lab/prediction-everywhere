@@ -1,0 +1,178 @@
+# =============================================================================
+# Prediction Everywhere — .gitignore  (Psyche L6 Synthesis)
+# =============================================================================
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebook ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ── NumPy / SciPy cache ──────────────────────────────────────────────────────
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+
+# ── 예측 원리 실험 산출물 ────────────────────────────────────────────────────
+# TD 학습·도파민 RPE·자유에너지·능동 추론·착시 시뮬레이션의 직렬화 결과
+td_learning_runs/        # TD = 도파민 = 파블로프 통합
+rpe_runs/                # 도파민 보상 예측 오차
+free_energy_runs/        # 자유에너지 변분 추론
+active_inference_runs/   # 능동 추론 정책·행동
+predictive_coding_runs/  # 예측 부호화 (하향 예측·상향 오차)
+illusion_sims/           # 착시 = 강한 사전확률
+*.trials
+*.episodes
+
+# ── Experiment outputs ───────────────────────────────────────────────────────
+# 생성된 그림 (각 챕터)
+# Ch1: 신호·상태·정책 예측 도식 · 세 수준 통합
+# Ch2: TD=도파민=파블로프 학습 곡선 · RPE 계층 · 자유에너지 일반화
+# Ch3: 예측 부호화 회로 · 착시 사전확률 · 언어 예측 · 정밀 가중치 · 내수용
+# Ch4: 능동 추론 지각/행동 · 자유에너지 야망 도식 · 행위주체성
+# Ch5: 예측처리 의식 내용 · 각성/수면/마취 자유에너지 · 어려운 문제
+# Ch6: L0~L5 예측 변주 지도 · 간극의 위치 · 종합
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.gif
+*.mp4
+
+# 결과 / 로그
+results/
+outputs/
+logs/
+runs/
+*.log
+*.csv
+*.tsv
+
+# ── 매개변수 sweep ───────────────────────────────────────────────────────────
+# 학습률 α sweep · 할인율 γ sweep · 사전확률 강도·정밀도 앙상블
+sweeps/
+param_studies/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── 대규모 시뮬레이션 cache ──────────────────────────────────────────────────
+sim_cache/
+ensemble_cache/
+batch_results/
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ── Documentation build ──────────────────────────────────────────────────────
+docs/_build/
+docs/generated/
+site/
+.mkdocs_cache/
+
+# ── LaTeX / 수식 PDF 빌드 ────────────────────────────────────────────────────
+# 일부 문서가 .tex 로 분석·유도 수식 export 하는 경우 대비
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+
+# ── Secrets / Credentials ────────────────────────────────────────────────────
+.env.local
+.env.*.local
+secrets.py
+credentials.json
+*.pem
+*.key
+
+# ── Test / lint cache ────────────────────────────────────────────────────────
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── 데이터 (참조 데이터 보존, 원자료·대용량은 제외) ──────────────────────────
+# 주의: 신경·행동 원자료(EEG·발화율 등)는 라이선스·개인정보 정책에 따라 커밋 금지
+data/
+datasets/
+raw/
+processed/
+checkpoints/
+!data/.gitkeep
