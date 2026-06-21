@@ -8,7 +8,7 @@ $$\delta = r + \gamma V(s') - V(s)\qquad(\text{TD 오차}),\qquad \Delta V = \al
 
 ### 지각이 **"세계에 대한 예측을 검증"** 하며, 언어 모델이 **"다음 토큰을 예측"** 하고,
 
-$$F = \underbrace{D_{\mathrm{KL}}\!\big[q(s)\,\|\,p(s)\big]}_{\text{복잡성}} - \underbrace{\mathbb{E}_q[\ln p(o\mid s)]}_{\text{정확도}}\;\;\Rightarrow\;\;\text{놀라움의 상한}$$
+$$F = \underbrace{D_{\mathrm{KL}}\big[q(s)\mathbin{\Vert}p(s)\big]}_{\text{복잡성}} - \underbrace{\mathbb{E}_q[\ln p(o\mid s)]}_{\text{정확도}}\quad\Rightarrow\quad\text{놀라움의 상한}$$
 
 ### 자유에너지 원리가 **"놀라움을 최소화"** 할 때 — 이 네 "예측" 이 *같은 원리의 다른 표현* 인가, 아니면 *단지 같은 단어를 공유* 하는가는 **다른 질문이다.**
 
@@ -16,27 +16,27 @@ $$F = \underbrace{D_{\mathrm{KL}}\!\big[q(s)\,\|\,p(s)\big]}_{\text{복잡성}} 
 
 > *"도파민은 보상을 신호한다" 고 **뭉뚱그리는 것** 과,*
 >
-> $$\text{도파민 발화율} \;\propto\; \delta = r + \gamma V(s') - V(s)\quad(\text{Schultz 1997})$$
+> $$\text{도파민 발화율} \propto \delta = r + \gamma V(s') - V(s)\quad(\text{Schultz 1997})$$
 >
-> *도파민이 보상이 아니라 보상 **예측 오차** 를 신호하며 — 그 오차가 Sutton·Barto 의 TD 오차, 파블로프의 Rescorla–Wagner 와 *동일한 수학* 임을 아는 것은 다르다.*
+> *도파민이 보상이 아니라 보상 **예측 오차** 를 신호하며 — 그 오차가 Sutton·Barto 의 TD 오차, 파블로프의 Rescorla–Wagner 와 **동일한 수학** 임을 아는 것은 다르다.*
 >
 > *"지각은 감각의 수동적 수용이다" 라고 **믿는 것** 과,*
 >
-> $$\text{지각} = \arg\max_{s}\, p(s \mid o) \;\propto\; \underbrace{p(o\mid s)}_{\text{감각}}\,\underbrace{p(s)}_{\text{사전 예측}}$$
+> $$\text{지각} = \arg\max_{s} p(s \mid o) \propto \underbrace{p(o\mid s)}_{\text{감각}}\underbrace{p(s)}_{\text{사전 예측}}$$
 >
-> *지각이 하향 예측과 상향 오차의 협상이며, 착시가 *강한 사전확률의 승리* 임을 아는 것은 다르다.*
+> *지각이 하향 예측과 상향 오차의 협상이며, 착시가 **강한 사전확률의 승리** 임을 아는 것은 다르다.*
 >
 > *"행동과 지각은 별개의 과정" 으로 **나누는 것** 과,*
 >
 > $$\text{지각: 믿음을 세계에 맞춘다}\quad\Big|\quad\text{행동: 세계를 믿음에 맞춘다}\quad(\text{능동 추론})$$
 >
-> *둘 다 *같은 자유에너지* 를 최소화하는 두 경로일 뿐임을 아는 것은 다르다.*
+> *둘 다 **같은 자유에너지** 를 최소화하는 두 경로일 뿐임을 아는 것은 다르다.*
 >
 > *"LLM이 다음 단어를 예측하는 것은 뇌의 예측과 같다" 고 **단정하는 것** 과,*
 >
-> $$\text{LLM: } \max\, p(w_t \mid w_{<t}) \quad\overset{?}{=}\quad \text{뇌: 위계적 생성모델의 자유에너지 최소화}$$
+> $$\text{LLM: } \max p(w_t \mid w_{\lt t}) \quad\overset{?}{=}\quad \text{뇌: 위계적 생성모델의 자유에너지 최소화}$$
 >
-> *기계적 다음 토큰 예측이 인지적 예측처리와 *어디까지 같고 어디서 갈라지는지* 를 아는 것은 다르다.*
+> *기계적 다음 토큰 예측이 인지적 예측처리와 **어디까지 같고 어디서 갈라지는지** 를 아는 것은 다르다.*
 
 <br/>
 
